@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/styles.css" type="text/css">
+    <script src="../assets/scripts/scriptLogin.js"></script>
     <title>Document</title>
 </head>
 
+<body>
     <header>
         <nav>
             <ul>
@@ -23,11 +26,35 @@
         <div class="miJumbo">
             <h1>INICIAR SESIÓN</h1>
             <div>
-                <button type="button" onclick="">Crear cuenta</button>
-                <button type="button" onclick="">Entrar en mi cuenta</button>
+                <button type="button" onclick="deploySignInForm()">Crear cuenta</button>
+                <button type="button" onclick="deployLogInForm()">Entrar en mi cuenta</button>
             </div>
+        </div>
+
+        <div id="divSignIn" hidden>
+            <form name="signIn" onsubmit="signIn()" id="form1">
+                <label for="email">Correo electronico</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="user">Nombre de usuario</label><br>
+                <input type="text" name="user" id="user"><br>
+                <label for="pwd">Contraseña</label><br>
+                <input type="password" name="pwd" id="pwd"><br>
+                <label for="c_pwd">Confirmar contraseña</label><br>
+                <input type="password" name="c_pwd" id="c_pwd"><br>
+                <input type="submit" value="aceptar">
+        </div>
+
+        <div id="divLogIn" hidden>
+            <form name="logIn" onsubmit="logIn()" id="form2">
+                <label for="user">Usuario:</label><br>
+                <input type="text" id="user" name="user"><br>
+                <label for="pwd">Contraseña:</label><br>
+                <input type="password" id="pwd" name="pwd"><br>
+                <input type="submit" value="Ingresar"><br>
+            </form><br>
         </div>
 
     </main>
 </body>
+
 </html>
